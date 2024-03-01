@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=9,IE=edge,chrome=1" />
+	<meta name="viewport" content="width=1366"/>
+	<meta name="screen-orientation" content="portrait">
+	<meta name="x5-orientation" content="portrait">
+    <title>P9IM体验账号注册</title>
+	<link rel="shortcut icon" href="./favicon.ico">
+	<meta name="keywords" content="P9IM,政府即时通讯,企业即时通讯,局域网即时通讯软件,内网即时通讯,私有化部署,协同办公">
+	<meta name="description" content="P9IM是一个融合即时通讯、实时协作于一体的办公平台，专注私有化部署，提供即时通讯、在线文档、网盘、会议等功能和丰富的API接口。帮助企业降低沟通成本，提高办公效率。支持国产系统及芯片，全平台覆盖，免费试用。支持内网、局域网、内外网混合等多种环境下使用。">
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/register.css" />
+</head>
+<body background="./images/login/back.png" style=" background-repeat:no-repeat;background-size:100% 100%;background-attachment: fixed;">
+	<div class="register-form">
+		<div id="success-con" style="display: none;">
+			<p style="font-size: 30px;color: black;font-weight: 600;display: flex;align-items: center;"><img src="./images/login/submit-success.png" style="width: 30px;height: 30px;margin-right: 10px;">注册成功！</p>
+			<p style="line-height: 30px;font-size: 18px;">1、您的密码是手机号后六位。</p>
+			<p style="line-height: 30px;font-size: 18px;">2、<button type="button" class="btn-sty" id="btn-download" data-action="navigateTo">立即下载</button>相关客户端体检。</p>
+		</div>
+        <div class="form-container" id="register-con">
+                <div class="form-item-l">
+                    <p class="form-item-l-title">欢迎注册</p>
+                    <p class="form-item-l-descript">
+                        P9IM是一个融合即时通讯、实时协作于一体的办公平台，专注私有化部署，提供即时通讯、在线文档、网盘、会议等功能和丰富的API接口。
+						帮助企业降低沟通成本，提高办公效率。支持国产系统及芯片，全平台覆盖，免费试用。支持内网、局域网、内外网混合等多种环境下使用。
+                    </p>
+                </div>
+                <div class="form-item-r">
+                    <p class="form-item-r-image">
+                        <img src="./images/login/logo.png"  alt="logo">
+                    </p>
+                    <form action="">
+                    	<p class="form-item-input" >
+                            <img src="./images/login/org.png" class="img" >
+                            <input type="text" id="user-org"   placeholder="请填写单位名称">
+                            <div class="tooltip-input" id="tooltip-input1">温馨提示：请填写单位名称！</div>
+                        </p>
+                        <p class="form-item-input" style="margin-top: 20px;">
+                            <img src="./images/login/person.png" class="img" >
+                             <input type="text"  id="user-name"  placeholder="请填写姓名">
+                             <div class="tooltip-input" id="tooltip-input2">温馨提示：请填写姓名！</div>
+                        </p>
+                        <p class="form-item-input" style="margin-top: 20px;">
+                            <img src="./images/login/phone.png" class="img" >
+                            <input type="text"  id="user-phone"  placeholder="请填写手机号码">
+                            <div class="tooltip-input" id="tooltip-input3">温馨提示：请填写手机号码！</div>
+                        </p>
+                        
+                        <p class="form-item-input" id="code-item" style="margin-top: 20px;">
+                            <img src="./images/login/ver.png" style="width: 16px;margin: 0 2px;" >
+                            <input id="verif-code" type="number" placeholder="短信验证码">
+                            <input class="ver-button dis-but" id="ver-button" type="button" value="发送验证码">
+                            <div class="tooltip-input" id="tooltip-input4">温馨提示：请输入短信验证码！</div>
+                        </p>
+                        <p class="submit-button">
+                            <input  class="submit" id="submit-button" type="button" value="立即注册">
+                        </p>
+						<p id="errorMsg" style="color: red;font-size: 18px;"></p>
+                </form>
+                </div>
+                <div class="modal" id="ver-modal">
+			        <div class="modal-content">
+			            <div class="modal-body">
+			                <div class="mb_revise">
+			                	<div class="ver-title">
+			                		<span>安全验证</span>
+			                    	<img src="./images/login/close.png" class="opt-close" onclick="closeDlg()">
+			                	</div>
+		                		<div style="display: flex;">
+									<img src="./images/login/refresh.png" style="width: 27px;height: 27px;margin-right: 20px;cursor: pointer;" onclick="exchange();">
+									<span style="color: #333;font-size: 16px;" id="opt-title">拖动下方滑块完成拼图</span>
+									<span style="color: red;font-size: 16px;" id="result-msg"></span>
+		                		</div>
+		                		<div id="container-capture-bd">
+									<div id="loading-container">
+										<img style="width: 60px;height: 60px;margin: auto;" id="status-img" src="./images/login/loading.gif">
+									</div>
+		                			<div class="imageDiv-capture-bd">
+								        <img id="validateImage-capture-bd" src="" alt=""/>
+								        <img id="slideImage-capture-bd" src="" alt=""/>
+								    </div>
+			                		<div id="sliderOuter-capture-bd" class="outer-capture-bd">
+							            <div id="sliderInner-capture-bd" class="inner-capture-bd">
+							                <div class="coverIcon-capture-bd">丨丨丨</div>
+							            </div>
+							        </div>
+		                		</div>
+			                	<div>
+			                		<span id="operateResult-capture-bd"></span>
+			                	</div>
+			                </div>
+			            </div>
+			        </div>
+			    </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/Tdrag.js"></script>
+    <script type="text/javascript" src="js/register.js"></script>
+	<!-- uni 的 SDK，必须引用。 -->  
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript">
+		document.addEventListener('UniAppJSBridgeReady', function() {  
+		    document.querySelector('#btn-download').addEventListener('click', function(evt) {  
+		        var target = evt.target;  
+				console.log(target)
+		        if (target.tagName === 'BUTTON') {  
+		            var action = target.getAttribute('data-action');  
+					console.log(action)
+		            if(action === 'navigateTo') {  
+		                uni.navigateTo({  
+		                    url: '/pages/download?id=5'  
+		                });  
+		            }  
+		        }  
+		    });  
+		});
+	</script>
+</body>
+</html>

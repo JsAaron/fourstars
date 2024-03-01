@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<script> var _hmt = _hmt || []; (function() {   var hm = document.createElement("script");   hm.src = "https://hm.baidu.com/hm.js?9d10377fd4e45238cec3cca40a839e09";   var s = document.getElementsByTagName("script")[0];    s.parentNode.insertBefore(hm, s); })(); </script>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=1366"/>
+		<meta name="screen-orientation" content="portrait">
+		<meta name="x5-orientation" content="portrait">
+		<link rel="shortcut icon" href="<%= BASE_URL %>static/favicon.ico">
+		<meta name="keywords" content="P9IM,政府即时通讯,企业即时通讯,局域网即时通讯软件,内网即时通讯,私有化部署,协同办公">
+		<meta name="description" content="P9IM是一个融合即时通讯、实时协作于一体的办公平台，专注私有化部署，提供即时通讯、在线文档、网盘、会议等功能和丰富的API接口。帮助企业降低沟通成本，提高办公效率。支持国产系统及芯片，全平台覆盖，免费试用。支持内网、局域网、内外网混合等多种环境下使用。">
+		<meta name="copyright" content="Copyright © 2013 Yunagile All rights reserved.">
+		<!-- <title>P9IM-国产政府企业即时通讯及协同办公平台|私有化部署</title> -->
+		<title>
+			<%= htmlWebpackPlugin.options.title %>
+		</title>
+		<!-- Open Graph data -->
+		<!-- <meta property="og:title" content="Title Here" /> -->
+		<!-- <meta property="og:url" content="http://www.example.com/" /> -->
+		<!-- <meta property="og:image" content="http://example.com/image.jpg" /> -->
+		<!-- <meta property="og:description" content="Description Here" /> -->
+		<script>
+			var coverSupport = 'CSS' in window && typeof CSS.supports === 'function' && (CSS.supports('top: env(a)') || CSS.supports('top: constant(a)'))
+			document.write('<meta name="viewport" content="width=1366" />')
+		</script>
+		<!-- <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+		<script type="text/javascript" src="https://js.cdn.aliyun.dcloud.net.cn/dev/uni-app/uni.webview.1.5.2.js"></script> -->
+		<link rel="stylesheet" href="<%= BASE_URL %>static/index.<%= VUE_APP_INDEX_CSS_HASH %>.css" />
+		<style>
+			body {
+				user-select: text;
+			}
+		</style>
+	</head>
+	<body>
+		<noscript>
+			<strong>Please enable JavaScript to continue.</strong>
+		</noscript>
+		<div id="app" ></div>
+		<!-- built files will be auto injected -->
+	</body>
+</html>

@@ -1,0 +1,73 @@
+{
+	"pages": [
+		{
+			"path": "pages/index",
+			"style": {
+				"titleNView": false
+			}
+		},
+		{
+			"path": "pages/product",
+			"style": {
+				"titleNView": false
+			}
+		},
+		{
+			"path": "pages/customer",
+			"style": {
+				"titleNView": false
+			}
+		},
+		{
+			"path": "pages/download",
+			"style": {
+				"titleNView": false
+			}
+		},
+		{
+			"path": "pages/synergy",
+			"style": {
+				"titleNView": false
+			}
+		},
+		{
+			"path": "pages/workportal",
+			"style": {
+				"titleNView": false
+			}
+		},
+		{
+			"path": "pages/localization",
+			"style": {
+				"titleNView": false
+			}
+		},
+		{
+			"path": "pages/html",
+			"style": {
+				"titleNView": false
+			}
+		},
+		{
+			"path": "pages/company",
+			"style": {
+				"titleNView": false
+			}
+		},
+		{
+			"path": "pages/download_web",
+			"style": {
+				"titleNView": false
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTitleText": "P9IM-国产政府企业即时通讯及协同办公平台|私有化部署"
+	},
+	"topWindow": {
+		"path": "pages/top/title-bar",
+		"style": {
+			"height": "100px"
+		}
+	}
+}

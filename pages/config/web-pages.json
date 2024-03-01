@@ -1,0 +1,13 @@
+{
+	"desc": "IM官网页面",
+	"pages": [
+		{
+			"desc": "系统首页",
+			"path": "/pages/index",
+			"start": true,
+			"style": {
+				"titleNView": false
+			}
+		}
+	]
+}

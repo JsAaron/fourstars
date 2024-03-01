@@ -1,0 +1,14 @@
+{
+  "name": "P9App",
+  "version": "7.0.5",
+  "description": "云南软捷科技p9app框架",
+  "main": "index.js",
+  "keywords": [
+    "软捷科技",
+    "yunagile"
+  ],
+  "author": "Jie.",
+  "license": "MIT",
+  "dependencies": {
+  }
+}
