@@ -6,6 +6,16 @@
 				"titleNView": false
 			}
 		},
+
+		// ========= 新闻中心 ==============
+
+		{
+			"path": "pages/news/classifyCenter",
+			"style": {
+				"titleNView": false
+			}
+		},
+
 		{
 			"path": "pages/product",
 			"style": {
@@ -62,7 +72,7 @@
 		}
 	],
 	"globalStyle": {
-		"navigationBarTitleText": "P9IM-国产政府企业即时通讯及协同办公平台|私有化部署"
+		"navigationBarTitleText": "四星建设科技网 - 材料设备分类分级管理体系"
 	},
 	"topWindow": {
 		"path": "pages/top/title-bar",

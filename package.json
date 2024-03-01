@@ -10,5 +10,6 @@
   "author": "Jie.",
   "license": "MIT",
   "dependencies": {
+    "element-ui": "^2.15.14"
   }
 }
