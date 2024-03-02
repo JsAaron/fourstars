@@ -20,8 +20,8 @@ export function spliceUrl(ip, apiUrl) {
   return newUrl
 }
 
-apiUrl = spliceUrl($config.baseRoot, apiUrl)
+// apiUrl = spliceUrl($config.baseRoot, apiUrl)
 
-const apiUrls = Object.assign(apiUrl)
+// const apiUrls = Object.assign(apiUrl)
 
-export default apiUrls
+export default apiUrl

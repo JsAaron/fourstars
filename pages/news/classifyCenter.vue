@@ -12,7 +12,7 @@
       <!-- 搜索 -->
       <view class="yitu-search-component">
         <view class="el-input el-input--medium el-input--suffix">
-          <el-input :border="none" v-model="input" placeholder="请输入搜索内容" class="el-input__inner"></el-input>
+          <el-input v-model="input" placeholder="请输入搜索内容" class="el-input__inner"></el-input>
         </view>
         <el-button class="el-button el-button--default el-button--medium">搜索</el-button>
       </view>
@@ -62,19 +62,21 @@ export default {
     return {}
   },
   onLoad(params) {
-    this.$api.request({
-      url: this.$api.apiUrl.classifyCenter.getIndustryList,
-      data: {
-        industryKey: '1',
-        industryStatus: '',
-        pageIndex: 1,
-        pageSize: 10,
-        productStatus: null
-      },
-      method: 'POST'
-    }).then(res=>{
-			console.log(111,res)
-		})
+    this.$api
+      .request({
+        url: this.$api.apiUrl.classifyCenter.getIndustryList,
+        data: {
+          industryKey: '1',
+          industryStatus: '',
+          pageIndex: 1,
+          pageSize: 10,
+          productStatus: null
+        },
+        method: 'POST'
+      })
+      .then(res => {
+        console.log(111, res)
+      })
   },
   onPageScroll(res) {
     uni.$emit('onPageScroll', res.scrollTop)

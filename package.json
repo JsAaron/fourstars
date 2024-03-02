@@ -10,6 +10,7 @@
   "author": "Jie.",
   "license": "MIT",
   "dependencies": {
+    "better-mock": "^0.3.7",
     "element-ui": "^2.15.14"
   }
 }
