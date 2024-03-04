@@ -10,7 +10,14 @@
 		// ========= 新闻中心 ==============
 
 		{
-			"path": "pages/news/classifyCenter",
+			"path": "pages/news/classifyCenter/index",
+			"style": {
+				"titleNView": false
+			}
+		},
+
+		{
+			"path": "pages/news/productCenter/index",
 			"style": {
 				"titleNView": false
 			}

@@ -195,7 +195,12 @@ export default {
       switch (e) {
         case '分类中心':
           uni.navigateTo({
-            url: '/pages/news/classifyCenter'
+            url: '/pages/news/classifyCenter/index'
+          })
+          break
+        case '产品中心':
+          uni.navigateTo({
+            url: '/pages/news/productCenter/index'
           })
           break
         default:
