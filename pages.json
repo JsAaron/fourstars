@@ -1,90 +1,97 @@
 {
-	"pages": [
-		{
-			"path": "pages/index",
-			"style": {
-				"titleNView": false
-			}
-		},
+  "pages": [
+    {
+      "path": "pages/index",
+      "style": {
+        "titleNView": false
+      }
+    },
 
-		// ========= 新闻中心 ==============
+    // ========= 新闻中心 ==============
 
-		{
-			"path": "pages/news/classifyCenter/index",
-			"style": {
-				"titleNView": false
-			}
-		},
+    {
+      "path": "pages/news/classifyCenter/index",
+      "style": {
+        "titleNView": false
+      }
+    },
 
-		{
-			"path": "pages/news/productCenter/index",
-			"style": {
-				"titleNView": false
-			}
-		},
+    {
+      "path": "pages/news/productCenter/index",
+      "style": {
+        "titleNView": false
+      }
+    },
 
-		{
-			"path": "pages/product",
-			"style": {
-				"titleNView": false
-			}
-		},
-		{
-			"path": "pages/customer",
-			"style": {
-				"titleNView": false
-			}
-		},
-		{
-			"path": "pages/download",
-			"style": {
-				"titleNView": false
-			}
-		},
-		{
-			"path": "pages/synergy",
-			"style": {
-				"titleNView": false
-			}
-		},
-		{
-			"path": "pages/workportal",
-			"style": {
-				"titleNView": false
-			}
-		},
-		{
-			"path": "pages/localization",
-			"style": {
-				"titleNView": false
-			}
-		},
-		{
-			"path": "pages/html",
-			"style": {
-				"titleNView": false
-			}
-		},
-		{
-			"path": "pages/company",
-			"style": {
-				"titleNView": false
-			}
-		},
-		{
-			"path": "pages/download_web",
-			"style": {
-				"titleNView": false
-			}
-		}
-	],
-	"globalStyle": {
-		"navigationBarTitleText": "四星建设科技网 - 材料设备分类分级管理体系"
-	},
-	"topWindow": {
-		"path": "pages/top/title-bar",
-		"style": {
-			"height": "100px"
-		}
-	}
+    {
+      "path": "pages/news/authorityList/index",
+      "style": {
+        "titleNView": false
+      }
+    }
+
+    // {
+    //   "path": "pages/product",
+    //   "style": {
+    //     "titleNView": false
+    //   }
+    // },
+    // {
+    //   "path": "pages/customer",
+    //   "style": {
+    //     "titleNView": false
+    //   }
+    // },
+    // {
+    //   "path": "pages/download",
+    //   "style": {
+    //     "titleNView": false
+    //   }
+    // },
+    // {
+    //   "path": "pages/synergy",
+    //   "style": {
+    //     "titleNView": false
+    //   }
+    // },
+    // {
+    //   "path": "pages/workportal",
+    //   "style": {
+    //     "titleNView": false
+    //   }
+    // },
+    // {
+    //   "path": "pages/localization",
+    //   "style": {
+    //     "titleNView": false
+    //   }
+    // },
+    // {
+    //   "path": "pages/html",
+    //   "style": {
+    //     "titleNView": false
+    //   }
+    // },
+    // {
+    //   "path": "pages/company",
+    //   "style": {
+    //     "titleNView": false
+    //   }
+    // },
+    // {
+    //   "path": "pages/download_web",
+    //   "style": {
+    //     "titleNView": false
+    //   }
+    // }
+  ],
+  "globalStyle": {
+    "navigationBarTitleText": "四星建设科技网 - 材料设备分类分级管理体系"
+  },
+  "topWindow": {
+    "path": "pages/top/title-bar",
+    "style": {
+      "height": "100px"
+    }
+  }
 }

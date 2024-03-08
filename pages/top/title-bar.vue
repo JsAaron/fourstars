@@ -10,57 +10,17 @@
           :default-active="activeIndex"
           class="el-menu-demo"
           mode="horizontal"
+          @click="() => console.log(111)"
           @select="handleSelect"
         >
-          <el-menu-item index="1">首页</el-menu-item>
-          <el-submenu index="2">
-            <template slot="title">新闻中心</template>
-            <el-menu-item index="2-1">选项1</el-menu-item>
-            <el-menu-item index="2-2">选项2</el-menu-item>
-            <el-menu-item index="2-3">选项3</el-menu-item>
-          </el-submenu>
-          <el-submenu index="3">
-            <template slot="title">四星评价体系</template>
-            <el-menu-item index="分类中心">分类中心</el-menu-item>
-            <el-menu-item index="产品中心">产品中心</el-menu-item>
-            <el-menu-item index="权威榜单">权威榜单</el-menu-item>
-          </el-submenu>
-          <el-submenu index="4">
-            <template slot="title">科技全景图</template>
-            <el-menu-item index="2-1">选项1</el-menu-item>
-            <el-menu-item index="2-2">选项2</el-menu-item>
-            <el-menu-item index="2-3">选项3</el-menu-item>
-            <el-submenu index="2-4">
-              <template slot="title">选项4</template>
-              <el-menu-item index="2-4-1">选项1</el-menu-item>
-              <el-menu-item index="2-4-2">选项2</el-menu-item>
-              <el-menu-item index="2-4-3">选项3</el-menu-item>
+          <block v-for="(item, index) in menuList" :key="index">
+            <el-submenu :index="item.index">
+              <template slot="title">{{ item.name }}</template>
+              <block v-for="(subItem, subIndex) in item.list" :key="subIndex">
+                <el-menu-item :index="getIndex(index, subIndex)">{{ subItem.name }}</el-menu-item>
+              </block>
             </el-submenu>
-          </el-submenu>
-          <el-submenu index="5">
-            <template slot="title">四星专家库</template>
-            <el-menu-item index="2-1">选项1</el-menu-item>
-            <el-menu-item index="2-2">选项2</el-menu-item>
-            <el-menu-item index="2-3">选项3</el-menu-item>
-            <el-submenu index="2-4">
-              <template slot="title">选项4</template>
-              <el-menu-item index="2-4-1">选项1</el-menu-item>
-              <el-menu-item index="2-4-2">选项2</el-menu-item>
-              <el-menu-item index="2-4-3">选项3</el-menu-item>
-            </el-submenu>
-          </el-submenu>
-          <el-submenu index="5">
-            <template slot="title">帮助中心</template>
-            <el-menu-item index="2-1">选项1</el-menu-item>
-            <el-menu-item index="2-2">选项2</el-menu-item>
-            <el-menu-item index="2-3">选项3</el-menu-item>
-            <el-submenu index="2-4">
-              <template slot="title">选项4</template>
-              <el-menu-item index="2-4-1">选项1</el-menu-item>
-              <el-menu-item index="2-4-2">选项2</el-menu-item>
-              <el-menu-item index="2-4-3">选项3</el-menu-item>
-            </el-submenu>
-          </el-submenu>
+          </block>
         </el-menu>
       </view>
       <view class="head-help">
@@ -68,52 +28,7 @@
           <text class="main-color">400-6393-239</text>
         </view> -->
         <view class="head-rule"></view>
-        <view class="head-btn" @click="onRegister()">免费试用</view>
-      </view>
-    </view>
-    <view class="popup-sty" v-if="popup" @mouseleave="removeActive">
-      <view class="container-div flex-column">
-        <view class="popup-title">
-          <text>产品介绍</text>
-        </view>
-        <view class="flex-row">
-          <view class="popup-padding">
-            <view class="popup-item" @click="openPage('/pages/product')">
-              <image src="/static/title1.png" mode="widthFix" style="width: 23px"></image>
-              <text class="margin-left10">IM 即时通讯</text>
-            </view>
-            <view class="popup-item" @click="openPage('/pages/synergy')">
-              <image src="/static/title2.png" mode="widthFix" style="width: 23px"></image>
-              <text class="margin-left10">协同办公</text>
-            </view>
-            <view class="popup-item" @click="openPage('/pages/workportal')">
-              <image src="/static/title3.png" mode="widthFix" style="width: 23px"></image>
-              <text class="margin-left10">工作门户</text>
-            </view>
-            <view class="popup-item" @click="openPage('/pages/localization')">
-              <image src="/static/title4.png" mode="widthFix" style="width: 23px"></image>
-              <text class="margin-left10">支持国产化</text>
-            </view>
-          </view>
-          <!-- <view class="popup-padding" style="margin-left: 50px;">
-						<view class="popup-item" @click="openPage('/pages/product')">
-							<image src="/static/title1.png" mode="widthFix" style="width: 23px;"></image>
-							<text class="margin-left10">IM 即时通讯</text>
-						</view>
-						<view class="popup-item" @click="openPage('/pages/synergy'	)">
-							<image src="/static/title2.png" mode="widthFix" style="width: 23px;"></image>
-							<text class="margin-left10">协同办公</text>
-						</view>
-						<view class="popup-item" @click="openPage('/pages/workportal')">
-							<image src="/static/title3.png" mode="widthFix" style="width: 23px;"></image>
-							<text class="margin-left10">工作门户</text>
-						</view>
-						<view class="popup-item" @click="openPage('/pages/localization')">
-							<image src="/static/title4.png" mode="widthFix" style="width: 23px;"></image>
-							<text class="margin-left10">支持国产化</text>
-						</view>
-					</view> -->
-        </view>
+        <view class="head-btn" @click="onRegister()">登录/注册</view>
       </view>
     </view>
   </view>
@@ -128,36 +43,42 @@ export default {
     return {
       activeIndex: '1',
       activeIndex2: '1',
-      tabs: [
+      menuList: [
         {
           name: '首页',
-          checked: true,
-          border: false
+          index: '1'
         },
         {
           name: '新闻中心',
-          checked: false,
-          border: false
+          index: '2',
+          list: []
         },
         {
           name: '四星评价体系',
-          checked: false,
-          border: false
+          index: '3',
+          list: [
+            {
+              name: '分类中心'
+            },
+            {
+              name: '产品中心'
+            },
+            {
+              name: '权威榜单'
+            }
+          ]
         },
         {
           name: '科技全景图',
-          checked: false,
-          border: false
+          index: '4'
         },
         {
           name: '四星专家库',
-          checked: false,
-          border: false
+          index: '5'
         },
         {
           name: '帮助中心',
-          checked: false,
-          border: false
+          index: '6'
         }
       ],
       popup: false,
@@ -191,22 +112,31 @@ export default {
     })
   },
   methods: {
+    getIndex(index, subIndex) {
+      return index + '-' + subIndex
+    },
+
     handleSelect(e) {
       switch (e) {
-        case '分类中心':
+        case '2-0':
           uni.navigateTo({
             url: '/pages/news/classifyCenter/index'
           })
           break
-        case '产品中心':
+        case '2-1':
           uni.navigateTo({
             url: '/pages/news/productCenter/index'
           })
           break
+        case '2-2':
+          uni.navigateTo({
+            url: '/pages/news/authorityList/index'
+          })
+          break
+
         default:
           break
       }
-      console.log('🚀 ~ handleSelect ~ e:', e)
     },
 
     // 注册
@@ -301,7 +231,7 @@ export default {
 .p9-section {
   width: 100%;
   height: 88px;
-  background-color: fff;
+  background-color: #fff;
 }
 .p9-section-active {
   width: 100%;
