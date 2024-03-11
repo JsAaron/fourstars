@@ -86,7 +86,7 @@
     // }
   ],
   "globalStyle": {
-    "navigationBarTitleText": "四星建设科技网 - 材料设备分类分级管理体系"
+    "navigationBarTitleText": "树图科技网 - 材料设备分类分级管理体系"
   },
   "topWindow": {
     "path": "pages/top/title-bar",

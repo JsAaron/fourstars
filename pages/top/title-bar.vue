@@ -2,7 +2,7 @@
   <view :class="pageScroll ? 'p9-section-active' : 'p9-section'">
     <view class="title-div">
       <view class="head-logo" @click="clickLogo">
-        <image src="/static/logo.png" mode="widthFix" style="width: 200px"></image>
+        <image src="http://www.hncfx.com/assets/logo2-fe404cde.svg" mode="widthFix" style="width: 200px"></image>
       </view>
       <view class="head-menu">
         <el-menu
@@ -33,6 +33,8 @@
     </view>
   </view>
 </template>
+
+
 
 <script>
 /**
