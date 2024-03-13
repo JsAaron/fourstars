@@ -12,14 +12,31 @@
           @click="() => console.log(111)"
           @select="handleSelect"
         >
-          <block v-for="(item, index) in menuList" :key="index">
+          <el-menu-item index="1">首页</el-menu-item>
+          <el-submenu index="2">
+            <template slot="title"><view @click="handleSelect('2-1')">新闻中心</view></template>
+            <el-menu-item index="2-1">通知</el-menu-item>
+            <el-menu-item index="2-2">动态新闻</el-menu-item>
+          </el-submenu>
+          <el-submenu index="3">
+            <template slot="title">四星评价体系</template>
+            <el-menu-item index="3-1">分类中心</el-menu-item>
+            <el-menu-item index="3-2">产品中心</el-menu-item>
+            <el-menu-item index="3-3">权威榜单</el-menu-item>
+          </el-submenu>
+          <el-menu-item index="4">科技全景图</el-menu-item>
+          <el-menu-item index="5">四星专家库</el-menu-item>
+          <el-menu-item index="6">帮助中心</el-menu-item>
+          <!-- <block v-for="(item, index) in menuList" :key="index">
             <el-submenu :index="item.index">
               <template slot="title">{{ item.name }}</template>
               <block v-for="(subItem, subIndex) in item.list" :key="subIndex">
-                <el-menu-item :index="getIndex(index, subIndex)">{{ subItem.name }}</el-menu-item>
+                <el-menu-item :index="getIndex(index, subIndex)">
+                  {{ subItem.name }}
+                </el-menu-item>
               </block>
             </el-submenu>
-          </block>
+          </block> -->
         </el-menu>
       </view>
       <view class="head-help">
@@ -125,27 +142,32 @@ export default {
     handleSelect(e) {
       console.log('🚀 ~ handleSelect ~ e:', e)
       switch (e) {
-        case '1-0':
+        case '1':
           uni.navigateTo({
-            url: '/pages/newsCenter/notice/index'
-          })
-          break
-        case '1-1':
-          uni.navigateTo({
-            url: '/pages/newsCenter/trends/index'
-          })
-          break
-        case '2-0':
-          uni.navigateTo({
-            url: '/pages/news/classifyCenter/index'
+            url: '/pages/home/index'
           })
           break
         case '2-1':
           uni.navigateTo({
-            url: '/pages/news/productCenter/index'
+            url: '/pages/newsCenter/notice/index'
           })
           break
         case '2-2':
+          uni.navigateTo({
+            url: '/pages/newsCenter/trends/index'
+          })
+          break
+        case '3-1':
+          uni.navigateTo({
+            url: '/pages/news/classifyCenter/index'
+          })
+          break
+        case '3-2':
+          uni.navigateTo({
+            url: '/pages/news/productCenter/index'
+          })
+          break
+        case '3-3':
           uni.navigateTo({
             url: '/pages/news/authorityList/index'
           })
