@@ -8,7 +8,6 @@
         <el-menu
           text-color="#393977"
           :default-active="activeIndex"
-          class="el-menu-demo"
           mode="horizontal"
           @click="() => console.log(111)"
           @select="handleSelect"
@@ -34,8 +33,6 @@
   </view>
 </template>
 
-
-
 <script>
 /**
  * 程序启动页
@@ -53,7 +50,14 @@ export default {
         {
           name: '新闻中心',
           index: '2',
-          list: []
+          list: [
+            {
+              name: '通知'
+            },
+            {
+              name: '动态新闻'
+            }
+          ]
         },
         {
           name: '四星评价体系',
@@ -119,7 +123,18 @@ export default {
     },
 
     handleSelect(e) {
+      console.log('🚀 ~ handleSelect ~ e:', e)
       switch (e) {
+        case '1-0':
+          uni.navigateTo({
+            url: '/pages/newsCenter/notice/index'
+          })
+          break
+        case '1-1':
+          uni.navigateTo({
+            url: '/pages/newsCenter/trends/index'
+          })
+          break
         case '2-0':
           uni.navigateTo({
             url: '/pages/news/classifyCenter/index'
@@ -425,70 +440,51 @@ export default {
   background-color: #d1e7fbbf;
 }
 
-
 /deep/ .el-menu-item,
 /deep/ .el-submenu__title {
-  font-size:16px;
-  font-weight:600;
+  font-size: 16px;
+  font-weight: 600;
 }
-
 
 /deep/ .el-submenu .el-submenu__title:hover,
 /deep/ .el-submenu .el-submenu__title:hover {
-  -webkit-box-shadow:0 1px 4px 0 rgba(0,0,0,.1);
-  box-shadow:0 1px 4px 0 rgba(0,0,0,.1)
+  -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
 }
- /deep/ .el-submenu .el-submenu__title:hover,
- /deep/ .el-submenu .el-submenu__title:hover,
- /deep/ .el-submenu .el-submenu__title:hover,
- /deep/ .el-submenu .el-submenu__title:hover,
- /deep/ .el-submenu .el-submenu__title:hover,
- /deep/ .el-submenu .el-submenu__title:hover {
-  color:#fff!important
+/deep/ .el-submenu .el-submenu__title:hover,
+/deep/ .el-submenu .el-submenu__title:hover,
+/deep/ .el-submenu .el-submenu__title:hover,
+/deep/ .el-submenu .el-submenu__title:hover,
+/deep/ .el-submenu .el-submenu__title:hover,
+/deep/ .el-submenu .el-submenu__title:hover {
+  color: #fff !important;
 }
- /deep/ .el-submenu .el-submenu__title:hover,
- /deep/ .el-submenu .el-submenu__title:hover,
- /deep/ .el-submenu .el-submenu__title:hover,
- /deep/ .el-submenu .el-submenu__title:hover,
- /deep/ .el-submenu .el-submenu__title:hover,
- /deep/ .el-submenu .el-submenu__title:hover {
-  background-color:#393977!important
-}
-/deep/ .is-opened .el-submenu__title,
-/deep/ .is-opened .el-submenu__title {
-  color:#fff!important
-}
-/deep/ .is-opened .el-submenu__title,
-/deep/ .is-opened .el-submenu__title,
-/deep/ .is-opened .el-submenu__title,
-/deep/ .is-opened .el-submenu__title {
-  color:#393977!important
+/deep/ .el-submenu .el-submenu__title:hover,
+/deep/ .el-submenu .el-submenu__title:hover,
+/deep/ .el-submenu .el-submenu__title:hover,
+/deep/ .el-submenu .el-submenu__title:hover,
+/deep/ .el-submenu .el-submenu__title:hover,
+/deep/ .el-submenu .el-submenu__title:hover {
+  background-color: #393977 !important;
 }
 /deep/ .is-opened .el-submenu__title,
 /deep/ .is-opened .el-submenu__title {
-  background-color:hsla(0,0%,100%,.1)!important
+  color: #fff !important;
 }
 /deep/ .is-opened .el-submenu__title,
 /deep/ .is-opened .el-submenu__title,
 /deep/ .is-opened .el-submenu__title,
 /deep/ .is-opened .el-submenu__title {
-  background-color:rgba(57,57,119,.1)!important
+  color: #393977 !important;
 }
-
-
-/deep/ .el-menu-item {
-  height:46px;
-  line-height:46px;
-  padding:0;
-  color:#393977!important
+/deep/ .is-opened .el-submenu__title,
+/deep/ .is-opened .el-submenu__title {
+  background-color: hsla(0, 0%, 100%, 0.1) !important;
 }
-
-/deep/ .el-menu-item:hover,
-.top-submenu .el-menu-item:hover {
-  color:#fff!important
+/deep/ .is-opened .el-submenu__title,
+/deep/ .is-opened .el-submenu__title,
+/deep/ .is-opened .el-submenu__title,
+/deep/ .is-opened .el-submenu__title {
+  background-color: rgba(57, 57, 119, 0.1) !important;
 }
-
-
-
-
 </style>

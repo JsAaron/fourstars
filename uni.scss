@@ -2008,3 +2008,18 @@ p[data-v-78a500b1] {
   mask-size: cover !important;
   display: inline-block;
 }
+
+/deep/ .el-menu--popup .el-menu-item {
+  height: 46px !important;
+  line-height: 46px !important;
+  padding: 0 !important;
+  //margin-left: 20px;
+  text-align: center;
+}
+
+
+/deep/ .el-menu--popup, 
+/deep/ .el-menu-item,
+/deep/ .el-submenu__title {
+  min-width:130px!important
+}

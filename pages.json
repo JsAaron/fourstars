@@ -28,8 +28,20 @@
       "style": {
         "titleNView": false
       }
-    }
+    },
 
+    {
+      "path": "pages/newsCenter/notice/index",
+      "style": {
+        "titleNView": false
+      }
+    },
+    {
+      "path": "pages/newsCenter/trends/index",
+      "style": {
+        "titleNView": false
+      }
+    }
     // {
     //   "path": "pages/product",
     //   "style": {
