@@ -267,7 +267,7 @@ export default {
 }
 
 .head-menu {
-  width: 750px;
+  // width: 750px;
   margin-left: 80px;
   height: 88px;
   display: flex;
@@ -293,7 +293,7 @@ export default {
 }
 
 .menu-item {
-  width: 130px;
+  // width: 130px;
   height: 88px;
   display: flex;
   justify-content: center;
@@ -424,4 +424,71 @@ export default {
 .popup-item:hover {
   background-color: #d1e7fbbf;
 }
+
+
+/deep/ .el-menu-item,
+/deep/ .el-submenu__title {
+  font-size:16px;
+  font-weight:600;
+}
+
+
+/deep/ .el-submenu .el-submenu__title:hover,
+/deep/ .el-submenu .el-submenu__title:hover {
+  -webkit-box-shadow:0 1px 4px 0 rgba(0,0,0,.1);
+  box-shadow:0 1px 4px 0 rgba(0,0,0,.1)
+}
+ /deep/ .el-submenu .el-submenu__title:hover,
+ /deep/ .el-submenu .el-submenu__title:hover,
+ /deep/ .el-submenu .el-submenu__title:hover,
+ /deep/ .el-submenu .el-submenu__title:hover,
+ /deep/ .el-submenu .el-submenu__title:hover,
+ /deep/ .el-submenu .el-submenu__title:hover {
+  color:#fff!important
+}
+ /deep/ .el-submenu .el-submenu__title:hover,
+ /deep/ .el-submenu .el-submenu__title:hover,
+ /deep/ .el-submenu .el-submenu__title:hover,
+ /deep/ .el-submenu .el-submenu__title:hover,
+ /deep/ .el-submenu .el-submenu__title:hover,
+ /deep/ .el-submenu .el-submenu__title:hover {
+  background-color:#393977!important
+}
+/deep/ .is-opened .el-submenu__title,
+/deep/ .is-opened .el-submenu__title {
+  color:#fff!important
+}
+/deep/ .is-opened .el-submenu__title,
+/deep/ .is-opened .el-submenu__title,
+/deep/ .is-opened .el-submenu__title,
+/deep/ .is-opened .el-submenu__title {
+  color:#393977!important
+}
+/deep/ .is-opened .el-submenu__title,
+/deep/ .is-opened .el-submenu__title {
+  background-color:hsla(0,0%,100%,.1)!important
+}
+/deep/ .is-opened .el-submenu__title,
+/deep/ .is-opened .el-submenu__title,
+/deep/ .is-opened .el-submenu__title,
+/deep/ .is-opened .el-submenu__title {
+  background-color:rgba(57,57,119,.1)!important
+}
+
+
+/deep/ .el-menu-item {
+  height:46px;
+  line-height:46px;
+  padding:0;
+  color:#393977!important
+}
+
+/deep/ .el-menu-item:hover,
+.top-submenu .el-menu-item:hover {
+  color:#fff!important
+}
+
+
+
+
 </style>
