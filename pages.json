@@ -41,6 +41,18 @@
       "style": {
         "titleNView": false
       }
+    },
+    {
+      "path": "pages/scienceFullView/index",
+      "style": {
+        "titleNView": false
+      }
+    },
+    {
+      "path": "pages/materialEquipment/index",
+      "style": {
+        "titleNView": false
+      }
     }
     // {
     //   "path": "pages/product",

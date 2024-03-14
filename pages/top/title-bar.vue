@@ -172,6 +172,16 @@ export default {
             url: '/pages/news/authorityList/index'
           })
           break
+        case '4':
+          uni.navigateTo({
+            url: '/pages/scienceFullView/index'
+          })
+          break
+          case '5':
+          uni.navigateTo({
+            url: '/pages/materialEquipment/index'
+          })
+          break
 
         default:
           break
